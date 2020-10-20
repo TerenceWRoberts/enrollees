@@ -1,0 +1,18 @@
+<div class="container">
+    <h3>Edit Enrollee</h3>
+    <form>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" [(ngModel)]="editForm.name" name="name" placeholder="Enter Name">
+          <small *ngIf="editForm.name == '' || editForm.name.trim() == ''" class="form-text text-danger">Name is required</small>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" [(ngModel)]="editForm.active" name="active">
+          <label class="form-check-label" >Activation Status</label>
+        </div>
+        <br>
+        <button type="submit" (click)="saveUpdates()" class="btn btn-primary mr-2">Submit</button>
+        <button type="button" [routerLink]="['/']" class="btn btn-primary">Go Back</button>
+      </form>          
+</div>
+      
